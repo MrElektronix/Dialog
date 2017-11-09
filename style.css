@@ -1,0 +1,33 @@
+body {
+	font-family: "Lato", sans-serif;
+	background-color: black;
+	color:	white;
+}
+
+#canvas{
+	display: block;
+	margin: 0 auto;
+	border: solid 1px white;
+}
+
+div.DialogueBox{
+	display: block;
+	margin: 0 auto;
+	border: solid 1px blue;
+	width: 800px;
+	height:	250px;
+	text-align: center;
+}
+
+
+
+div.DialogueButtons{
+	text-align: center;
+}
+
+div.DialogueButtons input{
+	width: 500px;
+	height:	50px;
+	
+}
+
