@@ -130,33 +130,25 @@ class Dialogue{
 		this.answer3 = this.player.qa[this.currentIndex].answer3.a;
 	}
 	
-	setNewQA(value) {
+	CheckAnswer(value) {
 		if(value == "answer1") {
-			this.nextIndex = this.currentIndex += this.player.qa[this.currentIndex].answer1.Next;
-			
-			this.question = this.player.qa[this.nextIndex].question;
-			this.answer1 = this.player.qa[this.nextIndex].answer1.a;
-			this.answer2 = this.player.qa[this.nextIndex].answer2.a;
-			this.answer3 = this.player.qa[this.nextIndex].answer3.a;
+			this.SetQA(this.player.qa[this.currentIndex].answer1.Next);
 		}
 		
 		if(value == "answer2") {
-			this.nextIndex = this.currentIndex += this.player.qa[this.currentIndex].answer2.Next;
-			
-			this.question = this.player.qa[this.nextIndex].question;
-			this.answer1 = this.player.qa[this.nextIndex].answer1.a;
-			this.answer2 = this.player.qa[this.nextIndex].answer2.a;
-			this.answer3 = this.player.qa[this.nextIndex].answer3.a;
+			this.SetQA(this.player.qa[this.currentIndex].answer2.Next);
 		}
 		
 		if(value == "answer3") {
-			this.nextIndex = this.currentIndex += this.player.qa[this.currentIndex].answer3.Next;
-			
-			
-			this.question = this.player.qa[this.nextIndex].question;
-			this.answer1 = this.player.qa[this.nextIndex].answer1.a;
-			this.answer2 = this.player.qa[this.nextIndex].answer2.a;
-			this.answer3 = this.player.qa[this.nextIndex].answer3.a;
+			this.SetQA(this.player.qa[this.currentIndex].answer3.Next);
 		}
+	}
+	
+	SetQA(nextIndex){
+		this.nextIndex = this.currentIndex += nextIndex;
+		this.question = this.player.qa[this.nextIndex].question;
+		this.answer1 = this.player.qa[this.nextIndex].answer1.a;
+		this.answer2 = this.player.qa[this.nextIndex].answer2.a;
+		this.answer3 = this.player.qa[this.nextIndex].answer3.a;
 	}
 }

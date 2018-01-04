@@ -44,13 +44,13 @@ class Game {
 	setNewValue(value){
 		switch(value){
 			case "answer1":
-				this.dialogue.setNewQA("answer1");
+				this.dialogue.CheckAnswer("answer1");
 				break;
 			case "answer2":
-				this.dialogue.setNewQA("answer2");
+				this.dialogue.CheckAnswer("answer2");
 				break;
 			case "answer3":
-				this.dialogue.setNewQA("answer3");
+				this.dialogue.CheckAnswer("answer3");
 				break;
 		}
 		
